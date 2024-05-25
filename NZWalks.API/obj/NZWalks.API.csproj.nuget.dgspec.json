@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Udemy Courses\\ASP.NET_Core_Web_API_Net8 Course\\NZWalks\\NZWalks.API\\NZWalks.API.csproj": {}
+    "D:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj": {}
   },
   "projects": {
-    "C:\\Udemy Courses\\ASP.NET_Core_Web_API_Net8 Course\\NZWalks\\NZWalks.API\\NZWalks.API.csproj": {
+    "D:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Udemy Courses\\ASP.NET_Core_Web_API_Net8 Course\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+        "projectUniqueName": "D:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj",
         "projectName": "NZWalks.API",
-        "projectPath": "C:\\Udemy Courses\\ASP.NET_Core_Web_API_Net8 Course\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
-        "packagesPath": "C:\\Users\\WouterMalan\\.nuget\\packages\\",
-        "outputPath": "C:\\Udemy Courses\\ASP.NET_Core_Web_API_Net8 Course\\NZWalks\\NZWalks.API\\obj\\",
+        "projectPath": "D:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj",
+        "packagesPath": "C:\\Users\\Wouter\\.nuget\\packages\\",
+        "outputPath": "D:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\WouterMalan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wouter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,6 +50,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -74,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
