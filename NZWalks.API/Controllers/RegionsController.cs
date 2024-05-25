@@ -19,7 +19,7 @@ namespace NZWalks.API.Controllers
         {
             this.dbContext = context;
         }
-        
+
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -70,6 +70,7 @@ namespace NZWalks.API.Controllers
             return Ok(regionDto);
         }
 
+        //Create a new region
         [HttpPost]
         public IActionResult Create([FromBody] AddRegionRequestDto regionRequestDto)
         {
@@ -126,7 +127,7 @@ namespace NZWalks.API.Controllers
             this.dbContext.SaveChanges();
 
             //Map domain model to DTO
-            var regionDto = new RegionDto 
+            var regionDto = new RegionDto
             {
                 Id = regionDomain.Id,
                 Code = regionDomain.Code,
@@ -136,5 +137,40 @@ namespace NZWalks.API.Controllers
 
             return Ok(regionDto);
         }
+
+        //Delete an existing region
+        [HttpDelete]
+        [Route("{id:Guid}")]
+        public IActionResult Delete(Guid id)
+        {
+            if (id == Guid.Empty)
+            {
+                return BadRequest();
+            }
+
+            //Get the region domain model from the database
+            var regionDomainModel = this.dbContext.Regions.FirstOrDefault(region => region.Id == id);
+
+            if (regionDomainModel == null)
+            {
+                return NotFound();
+            }
+
+            //Delete the region from the database
+            this.dbContext.Regions.Remove(regionDomainModel);
+            this.dbContext.SaveChanges();
+
+            //Map domain model to DTO   
+            var regionDto = new RegionDto
+            {
+                Id = regionDomainModel.Id,
+                Code = regionDomainModel.Code,
+                Name = regionDomainModel.Name,
+                RegionImageUrl = regionDomainModel.RegionImageUrl
+            };
+
+            return Ok(regionDto);
+        }
+
     }
 }
