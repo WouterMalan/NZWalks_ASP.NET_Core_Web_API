@@ -97,5 +97,44 @@ namespace NZWalks.API.Controllers
             //Return 201 Created status code
             return CreatedAtAction(nameof(GetRegion), new { id = regionDomainModel.Id }, regionDto);
         }
+
+        //Update an existing region
+        [HttpPut]
+        [Route("{id:Guid}")]
+        public IActionResult Update(Guid id, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
+        {
+            if (id == Guid.Empty)
+            {
+                return BadRequest();
+            }
+
+            //Get the region domain model from the database
+            var regionDomain = this.dbContext.Regions.FirstOrDefault(region => region.Id == id);
+
+            if (regionDomain == null)
+            {
+                return NotFound();
+            }
+
+            //Map DTO to domain model
+            regionDomain.Code = updateRegionRequestDto.Code;
+            regionDomain.Name = updateRegionRequestDto.Name;
+            regionDomain.RegionImageUrl = updateRegionRequestDto.RegionImageUrl;
+
+            //Update the region in the database
+            this.dbContext.Regions.Update(regionDomain);
+            this.dbContext.SaveChanges();
+
+            //Map domain model to DTO
+            var regionDto = new RegionDto 
+            {
+                Id = regionDomain.Id,
+                Code = regionDomain.Code,
+                Name = regionDomain.Name,
+                RegionImageUrl = regionDomain.RegionImageUrl
+            };
+
+            return Ok(regionDto);
+        }
     }
 }
