@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NZWalks.API.Data;
 using NZWalks.API.Models.Domain;
+using NZWalks.API.Models.DTO;
 
 namespace NZWalks.API.Controllers
 {
@@ -22,10 +23,25 @@ namespace NZWalks.API.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var regionsDbContext = this.dbContext.Regions.ToList();
+            //Get all regions from the database
+            var regionsDomain = this.dbContext.Regions.ToList();
 
+            //Map domain models to DTOs
+            var regionsDto = new List<RegionDto>();
 
-            return Ok(regionsDbContext);
+            foreach (var regionDomain in regionsDomain)
+            {
+                regionsDto.Add(new RegionDto
+                {
+                    Id = regionDomain.Id,
+                    Code = regionDomain.Code,
+                    Name = regionDomain.Name,
+                    RegionImageUrl = regionDomain.RegionImageUrl
+                });
+            }
+
+            //Return DTOs to the client
+            return Ok(regionsDto);
         }
 
         //Get a single region by id
@@ -33,15 +49,25 @@ namespace NZWalks.API.Controllers
         [Route("{id}")]
         public IActionResult GetRegion([FromRoute] Guid id)
         {
-            var region = this.dbContext.Regions.FirstOrDefault(region => region.Id == id);
+            //Get the region domain model from the database
+            var regionDomain = this.dbContext.Regions.FirstOrDefault(region => region.Id == id);
 
-            if (region == null)
+            if (regionDomain == null)
             {
                 //Return 404 Not Found
                 return NotFound();
             }
 
-            return Ok(region);
+            //Map domain model to DTO
+            var regionDto = new RegionDto
+            {
+                Id = regionDomain.Id,
+                Code = regionDomain.Code,
+                Name = regionDomain.Name,
+                RegionImageUrl = regionDomain.RegionImageUrl
+            };
+
+            return Ok(regionDto);
         }
     }
 }
