@@ -9,6 +9,7 @@ namespace NZWalks.API.Repositories.IRepositories
     public interface IWalkRepository
     {
         Task<Walk> CreateWalkAsync(Walk walk);
+        Task<List<Walk>> GetAllWalksAsync();
 
 
 

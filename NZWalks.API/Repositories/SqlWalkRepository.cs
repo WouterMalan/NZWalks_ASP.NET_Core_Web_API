@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using NZWalks.API.Data;
 using NZWalks.API.Models.Domain;
 using NZWalks.API.Repositories.IRepositories;
@@ -22,6 +23,13 @@ namespace NZWalks.API.Repositories
             await this.dbContext.SaveChangesAsync();
 
             return walk;
+        }
+
+        public async Task<List<Walk>> GetAllWalksAsync()
+        {
+            return await this.dbContext.Walks.ToListAsync();
+
+
         }
     }
 }
