@@ -51,5 +51,12 @@ namespace NZWalks.API.Controllers
             return Ok(walksDto);
         }
 
+        //Get walk by id
+        [HttpGet("{id:Guid}")]
+        public async Task<IActionResult> GetWalkByIdAsync([FromRoute] Guid id)
+        {
+
+        }
+
     }
 }
