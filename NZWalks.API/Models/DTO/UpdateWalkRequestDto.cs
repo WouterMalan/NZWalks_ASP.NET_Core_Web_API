@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NZWalks.API.Models.DTO
 {
-    public class AddWalkRequestDto
+    public class UpdateWalkRequestDto
     {
         [Required]
         [MaxLength(100, ErrorMessage = "Name must be less than 100 characters long")]
