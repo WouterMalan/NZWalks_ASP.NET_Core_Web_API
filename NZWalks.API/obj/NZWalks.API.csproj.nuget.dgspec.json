@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj": {}
+    "d:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj": {}
   },
   "projects": {
-    "D:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj": {
+    "d:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj",
+        "projectUniqueName": "d:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj",
         "projectName": "NZWalks.API",
-        "projectPath": "D:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj",
+        "projectPath": "d:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\NZWalks.API.csproj",
         "packagesPath": "G:\\Users\\Wouter\\.nuget\\packages\\",
-        "outputPath": "D:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\obj\\",
+        "outputPath": "d:\\Udemy Courses\\ASP.NET_Core_Web_API\\NZWalksApi\\NZWalks_ASP.NET_Core_Web_API\\NZWalks.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "G:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,6 +54,14 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.5, )"
@@ -68,9 +76,17 @@
               "target": "Package",
               "version": "[8.0.5, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.6.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.6.0, )"
             }
           },
           "imports": [
