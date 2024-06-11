@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vUvMFQVA5qdM2afWo+rkLKEso2wW4hgCv7hJWgmO8xqs9IGAll3YjxL6FdQcmUK/t9xbFdOTVJ9YcsRtHCwGFQ==",
+  "dgSpecHash": "iWD0UB+BpgwK0OUxYM59Ox2SE8bXs/uJCi7eraNsdqNpwzNDJ9Q6xTrFGwhH933zhrLfFoLBsVsoN+MSBVsj2w==",
   "success": true,
-  "projectFilePath": "c:\\Udemy Courses\\ASP.NET_Core_Web_API_Net8 Course\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+  "projectFilePath": "C:\\Udemy Courses\\ASP.NET_Core_Web_API_Net8 Course\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WouterMalan\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\WouterMalan\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
