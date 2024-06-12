@@ -58,8 +58,8 @@ namespace NZWalks.API.Migrations.NZWalksAuthDb
                         },
                         new
                         {
-                            Id = "0f286d2a-3f6a-45cf-99e6-7860fcbf768a",
-                            ConcurrencyStamp = "0f286d2a-3f6a-45cf-99e6-7860fcbf768a",
+                            Id = "12db76a2-80e0-407e-b7b8-f959fcffc186",
+                            ConcurrencyStamp = "12db76a2-80e0-407e-b7b8-f959fcffc186",
                             Name = "Writer",
                             NormalizedName = "WRITER"
                         });
