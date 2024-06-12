@@ -9,9 +9,9 @@ namespace NZWalks.API.Data
 {
     public class NZWalksDbContext : DbContext
     {
-        public NZWalksDbContext(DbContextOptions<NZWalksDbContext> options) : base(options)
+        public NZWalksDbContext(DbContextOptions<NZWalksDbContext> options)
+            : base(options)
         {
-
         }
 
         public DbSet<Walk> Walks { get; set; }
