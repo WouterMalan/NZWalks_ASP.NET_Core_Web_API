@@ -40,7 +40,29 @@ namespace NZWalks.API.Controllers
                 await this.userManager.AddToRolesAsync(identityUser, registerRequestDto.Roles);
             }
 
-            return Ok();
+            return Ok("User created successfully");
+        }
+
+        //POST api/auth/login
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequestDto)
+        {
+            var user = await this.userManager.FindByEmailAsync(loginRequestDto.UserName);
+
+            if (user != null)
+            {
+                var checkPassword = await this.userManager.CheckPasswordAsync(user, loginRequestDto.Password);
+
+                if (checkPassword)
+                {
+                    //Create token
+
+
+                    return Ok("User logged in successfully");
+                }
+            }
+
+            return BadRequest("Invalid login attempt");
         }
     }
 }
