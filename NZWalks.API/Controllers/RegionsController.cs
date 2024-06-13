@@ -39,15 +39,11 @@ namespace NZWalks.API.Controllers
         {
             try
             {
-                this.logger.LogInformation("Getting all regions");
-
                 //Get all regions from the database
                 var regionsDomain = await this.regionRepository.GetAllAsync();
 
                 //Map domain models to DTOs
                 var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
-
-                this.logger.LogInformation($"Finished getting all regions. Found {JsonSerializer.Serialize(regionsDto)} regions.");
 
                 //Return DTOs to the client
                 return Ok(regionsDto);
