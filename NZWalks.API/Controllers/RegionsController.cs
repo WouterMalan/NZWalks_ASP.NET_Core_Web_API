@@ -37,18 +37,26 @@ namespace NZWalks.API.Controllers
         [Authorize(Roles = "Reader")]
         public async Task<IActionResult> GetAll()
         {
-            this.logger.LogInformation("Getting all regions");
+            try
+            {
+                this.logger.LogInformation("Getting all regions");
 
-            //Get all regions from the database
-            var regionsDomain = await this.regionRepository.GetAllAsync();
+                //Get all regions from the database
+                var regionsDomain = await this.regionRepository.GetAllAsync();
 
-            //Map domain models to DTOs
-            var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
+                //Map domain models to DTOs
+                var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
 
-            this.logger.LogInformation($"Finished getting all regions. Found {JsonSerializer.Serialize(regionsDto)} regions.");
+                this.logger.LogInformation($"Finished getting all regions. Found {JsonSerializer.Serialize(regionsDto)} regions.");
 
-            //Return DTOs to the client
-            return Ok(regionsDto);
+                //Return DTOs to the client
+                return Ok(regionsDto);
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex, "An error occurred while getting all regions");
+                throw;
+            }
         }
 
         //Get a single region by id
