@@ -17,7 +17,7 @@ namespace NZWalks.API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
+                .HasAnnotation("ProductVersion", "8.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -39,19 +39,48 @@ namespace NZWalks.API.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("beef3d8f-3833-4aa9-89b9-86b201b28807"),
+                            Id = new Guid("21112c91-03ed-414a-aaec-5ce4989b44d4"),
                             Name = "Easy"
                         },
                         new
                         {
-                            Id = new Guid("d8333cf8-a087-4419-9941-3a29e7d05ca2"),
+                            Id = new Guid("f36238c8-2320-4877-83ba-0aa7933c293e"),
                             Name = "Moderate"
                         },
                         new
                         {
-                            Id = new Guid("0166bd1d-2c86-4f53-9b96-593fcdc90cf7"),
+                            Id = new Guid("d1981349-699e-4fc9-a6bc-ff6d32c85b56"),
                             Name = "Hard"
                         });
+                });
+
+            modelBuilder.Entity("NZWalks.API.Models.Domain.Image", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("FileDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileExtension")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("FileSizeInBytes")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("NZWalks.API.Models.Domain.Region", b =>
