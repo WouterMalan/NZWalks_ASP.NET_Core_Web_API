@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NZWalks.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+223ca87e0569bcf387f1e197beb9dd9c23312e4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebe18cc4079ccc68f201b3be635231cf8b757cdc")]
 [assembly: System.Reflection.AssemblyProductAttribute("NZWalks.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NZWalks.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
