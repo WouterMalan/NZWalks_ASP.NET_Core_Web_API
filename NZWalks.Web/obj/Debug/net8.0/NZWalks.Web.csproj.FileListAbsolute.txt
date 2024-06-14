@@ -1,0 +1,8 @@
+C:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.Web\obj\Debug\net8.0\NZWalks.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.Web\obj\Debug\net8.0\NZWalks.Web.AssemblyInfoInputs.cache
+C:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.Web\obj\Debug\net8.0\NZWalks.Web.AssemblyInfo.cs
+C:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.Web\obj\Debug\net8.0\NZWalks.Web.csproj.CoreCompileInputs.cache
+C:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.Web\obj\Debug\net8.0\NZWalks.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.Web\obj\Debug\net8.0\NZWalks.Web.RazorAssemblyInfo.cache
+C:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.Web\obj\Debug\net8.0\NZWalks.Web.RazorAssemblyInfo.cs
+C:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.Web\obj\Debug\net8.0\NZWalks.Web.sourcelink.json
