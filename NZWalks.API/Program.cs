@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using NZWalks.API;
 using NZWalks.API.Data;
 using NZWalks.API.Mappings;
 using NZWalks.API.MiddleWares;
@@ -77,6 +78,8 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
+
+builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 
 builder.Services.AddDbContext<NZWalksDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksConnectionString")));
