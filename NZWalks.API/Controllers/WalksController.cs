@@ -48,21 +48,12 @@ namespace NZWalks.API.Controllers
         public async Task<IActionResult> GetAllWalks([FromQuery] string? filterOn, [FromQuery] string? filterQuery, [FromQuery] string? sortBy,
         [FromQuery] bool? isAscending, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 1000)
         {
-            try
-            {
-                var walksDomain = await walkRepository.GetAllWalksAsync(filterOn, filterQuery, sortBy, isAscending ?? true, pageNumber, pageSize);
+            var walksDomain = await walkRepository.GetAllWalksAsync(filterOn, filterQuery, sortBy, isAscending ?? true, pageNumber, pageSize);
 
-                //Map the domain model to a DTO
-                var walksDto = mapper.Map<IEnumerable<WalkDto>>(walksDomain);
+            //Map the domain model to a DTO
+            var walksDto = mapper.Map<IEnumerable<WalkDto>>(walksDomain);
 
-                return Ok(walksDto);
-            }
-            catch (Exception ex)
-            {
-                //Log the error
-
-                return Problem("An error occurred while getting all walks", null, (int)HttpStatusCode.InternalServerError);
-            }
+            return Ok(walksDto);
         }
 
         //Get walk by id
