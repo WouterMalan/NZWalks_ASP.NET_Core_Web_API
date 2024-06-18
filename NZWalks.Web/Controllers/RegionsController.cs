@@ -130,5 +130,25 @@ namespace NZWalks.Web.Controllers
 
             return View(request);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            try
+            {
+                var client = clientFactory.CreateClient("NZWalksAPI");
+
+                var httpResponseMessage = await client.DeleteAsync($"https://localhost:7129/regions/{id}");
+
+                httpResponseMessage.EnsureSuccessStatusCode();
+
+                return RedirectToAction("Index", "Regions");
+            }
+            catch
+            {
+                throw new Exception("An error occurred while deleting the region");
+            }
+
+        }
     }
 }
