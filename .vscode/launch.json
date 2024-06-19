@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "NZWalks API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "ApiBuild",
+            "program": "${workspaceFolder}/NZWalks.API/bin/Debug/net8.0/NZWalks.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/NZWalks.API",
+            "stopAtEntry": false,
+            "requireExactSource": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://localhost:5001"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views",
+                "/_framework": "${workspaceFolder}/_framework",
+                "/Pages": "${workspaceFolder}/Pages",
+                "/Shared": "${workspaceFolder}/Shared",
+                "/wwwroot": "${workspaceFolder}/wwwroot"
+            }
+        },
+        {
+            "name": "NZWalks Web",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "WebBuild",
+            "program": "${workspaceFolder}/NZWalks.Web/bin/Debug/net8.0/NZWalks.Web.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/NZWalks.Web",
+            "stopAtEntry": false,
+            "requireExactSource": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://localhost:5002"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views",
+                "/_framework": "${workspaceFolder}/_framework",
+                "/Pages": "${workspaceFolder}/Pages",
+                "/Shared": "${workspaceFolder}/Shared",
+                "/wwwroot": "${workspaceFolder}/wwwroot"
+            }
+        }
+        ],
+        "compounds": [
+            {
+                "name": "NZWalks Api and Web",
+                "configurations": ["NZWalks API", "NZWalks Web"]
+            }
+        ]
+    }

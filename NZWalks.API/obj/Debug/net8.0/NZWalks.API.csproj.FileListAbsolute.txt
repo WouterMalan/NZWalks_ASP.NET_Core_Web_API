@@ -281,3 +281,14 @@ c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\
 c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\obj\Debug\net8.0\NZWalks.API.sourcelink.json
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Serilog.dll
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Serilog.AspNetCore.dll
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+c:\Udemy Courses\ASP.NET_Core_Web_API_Net8 Course\NZWalks\NZWalks.API\bin\Debug\net8.0\Serilog.Sinks.File.dll

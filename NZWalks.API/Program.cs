@@ -38,12 +38,12 @@ builder.Services.AddApiVersioning(options =>
     options.ReportApiVersions = true;
 });
 
-
-builder.Services.AddVersionedApiExplorer(options =>
-{
-    options.GroupNameFormat = "'v'VVV";
-    options.SubstituteApiVersionInUrl = true;
-});
+// For versioning the api
+// builder.Services.AddVersionedApiExplorer(options =>
+// {
+//     options.GroupNameFormat = "'v'VVV";
+//     options.SubstituteApiVersionInUrl = true;
+// });
 
 builder.Services.AddHttpContextAccessor();
 
@@ -79,7 +79,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
+// builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 
 builder.Services.AddDbContext<NZWalksDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksConnectionString")));
@@ -127,19 +127,21 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
-var versionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+// var versionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(options =>
-    {
-        foreach (var description in versionDescriptionProvider.ApiVersionDescriptions)
-        {
-            options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
-        }
-    });
+    // app.UseSwaggerUI(options =>
+    // {
+    //     foreach (var description in versionDescriptionProvider.ApiVersionDescriptions)
+    //     {
+    //         options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+    //     }
+    // });
+
+    app.UseSwaggerUI();
 }
 
 app.UseMiddleware<ExceptionHandlerMiddleware>();
