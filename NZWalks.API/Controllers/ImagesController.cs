@@ -11,6 +11,12 @@ namespace NZWalks.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+
+    //To version the API, uncomment the following line
+    // [Route("api/v{version:apiVersion}/[controller]")]
+
+    // [ApiVersion("1.0")]
+    // [ApiVersion("2.0")]
     public class ImagesController : ControllerBase
     {
         private readonly IImageRepository imageRepository;
@@ -21,6 +27,7 @@ namespace NZWalks.API.Controllers
         }
 
         // Post: api/images/upload
+        // [MapToApiVersion("1.0")]
         [HttpPost("upload")]
         public async Task<IActionResult> Upload([FromForm] ImageUploadRequestDto imageUploadDto)
         {
